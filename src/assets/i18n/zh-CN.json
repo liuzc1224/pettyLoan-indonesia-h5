@@ -1,0 +1,1090 @@
+{
+  "userLoan": {
+    "title": "使用条款"
+  },
+  "meLoan": {
+    "title": "隐私政策"
+  },
+  "tip": {
+    "operateFail": "操作未执行",
+    "require": "请输入每个正确的信息",
+    "forgotPass": "忘记密码？",
+    "operateFailWithReason": "未实现的操作: ",
+    "operateSuccess": "成功",
+    "fetchFailReason": "获得信息失败，原因: ",
+    "notSame": "两次内容不一致",
+    "deal": "处理中",
+    "phoneRequire": "手机号码不能为空",
+    "canNotSame": "请勿选择相同的联系人",
+    "notOpen": "此功能尚未打开",
+    "outOfDate": "登录已过期，请重新登录。",
+    "valueEmpty": "暂无数据",
+    "requestPermission": "请先授权"
+  },
+  "login": {
+    "loading": "加载中",
+    "placeholder": {
+      "username": "输入手机号码",
+      "password": "输入密码"
+    },
+    "loginBtn": "登录",
+    "regist": "进行注册",
+    "noAccount": "没有帐户 ？ ",
+    "loginGuideTxt": "您的需求在任何时间和地点都得到满足"
+  },
+  "home": {
+    "choseLimitMount": "选择贷款金额?",
+    "choseLimitDay": "选择贷款期限?",
+    "button": "要求",
+    "mount": {
+      "top": "价值",
+      "bottom": "贷款(R$)"
+    },
+    "rate": {
+      "top": "兴趣",
+      "bottom": " 贷款(R$)"
+    },
+    "repay": {
+      "top": "值得",
+      "bottom": "支付(R$)"
+    },
+    "footer": {
+      "rateDay": "固定利率",
+      "rateYear": "对应于",
+      "repayDate": "付款日期",
+      "kownsMore": "如有疑问",
+      "contact": "请联系我们的SAC"
+    },
+    "cashPop": {
+      "txt": "恭喜！ 您刚刚使用MyLoan应用程序进行了个人贷款。 如果一切顺利，您将在48小时内收到您帐户的信用。 延迟付款可能会引起SPC的兴趣和抗议。 按时付款并继续享受MyLoan应用。",
+      "btn": "我知道"
+    }
+  },
+  "side": {
+    "menu": {
+      "history": "历史",
+      "award": "我的优惠券",
+      "service": "客户服务",
+      "invite": "邀请朋友",
+      "aboutUs": "关于我们",
+      "aboutRepay": "关于付款",
+      "config": "设置",
+      "logout": "退出帐户",
+      "notLogin": "未登录"
+    }
+  },
+  "unit": {
+    "currency": "R$",
+    "day": "天"
+  },
+  "area": [
+    {
+      "name": "中国",
+      "value": "86"
+    },
+    {
+      "name": "巴西",
+      "value": "55"
+    }
+  ],
+  "areaNameSelect": "选择地区",
+  "register": {
+    "regist": "注册",
+    "setPass": {
+      "title": "设置登录密码",
+      "explain": "将验证码发送至编号",
+      "repost": "发送验证码",
+      "set": "设置登录密码",
+      "tip": "6-20个字符，包括2个字母，数字和符号标准",
+      "again": "再输入一次",
+      "button": "中文"
+    },
+    "placeholder": {
+      "phone": "输入您的手机号码",
+      "mail": "输入您的邮箱",
+      "cpf": "公积金号码"
+    },
+    "access": [
+      "我同意",
+      " 使用条款",
+      "隐私政策",
+      " de MyLoan"
+    ],
+    "hasAccount": "已经有账号？",
+    "login": "登录",
+    "areaName": "巴西"
+  },
+  "audit": {
+    "tip": "最大速度分析",
+    "wait": "正在审核中，请耐心等待",
+    "notYou": "如果你不是申请贷款的人",
+    "contact": "如果已付款，请告知我们"
+  },
+  "refuse": {
+    "first": "亲爱的用户",
+    "sec": "很抱歉通知你",
+    "third": "你没资格申请",
+    "fourth": "在MyLoan贷款",
+    "fifth": "请稍后再说",
+    "reapply": "再次请求"
+  },
+  "loan": {
+    "wait": "我们的银行正在处理您的请求",
+    "top": "如果您未在24小时内收到帐户中的信用",
+    "bottom": "请联系我们的客服",
+    "order": "处理"
+  },
+  
+  "detail": {
+    "infoGroup":[
+      {
+        "txt": "订单号",
+        "reject": "orderNo",
+        "type": false,
+        "isEmpty": false
+      },
+      {
+        "txt": "借款金额(比索)",
+        "reject": "auditMoney",
+        "type": false,
+        "isEmpty": false
+      },
+      {
+        "txt": "借款期限(天)",
+        "reject": "loanDays",
+        "type": false,
+        "isEmpty": false
+      },
+      {
+        "txt": "借款日利率",
+        "reject": "lendRate",
+        "type": false,
+        "isEmpty": false
+      },
+      {
+        "txt": "借款利息",
+        "reject": "lendRateMoney",
+        "type": false,
+        "isEmpty": false
+      },
+      {
+        "txt": "应还金额(比索)",
+        "reject": "beforeCouponRepayAmount",
+        "type": false,
+        "isEmpty": false
+      },
+      {
+        "txt": "其他费用",
+        "reject": "totalOtherCost",
+        "type": false,
+        "isEmpty": false
+      },
+      {
+        "txt": "技术服务费(比索)",
+        "reject": "techServiceCost",
+        "type": false,
+        "isEmpty": false
+      },
+      {
+        "txt": "审核服务费(比索)",
+        "reject": "auditServiceCost",
+        "type": false,
+        "isEmpty": false
+      },
+      {
+        "txt": "16%的增值税(比索)",
+        "reject": "appreciationMoney",
+        "type": false,
+        "isEmpty": false
+      },
+      {
+        "txt": "滞纳金",
+        "reject": "overDueRateMoney",
+        "type": false,
+        "isEmpty": false
+      },
+      {
+        "txt": "优惠券",
+        "reject": "couponAmount",
+        "type": false,
+        "isEmpty": false
+      },
+      {
+        "txt": "实际应还金额(比索)",
+        "reject": "currentRepay",
+        "type": false,
+        "isEmpty": false
+      },
+      {
+        "txt": "借款日期",
+        "reject": "stringBorrowTime",
+        "type": false,
+        "isEmpty": true
+      },
+      {
+        "txt": "应还日期",
+        "reject": "stringRepayTime",
+        "type": false,
+        "isEmpty": true
+      },
+      {
+        "txt": "取款账户",
+        "reject": "bankCardNum",
+        "type": false,
+        "isEmpty": true
+      },
+      {
+        "txt": "取款码",
+        "reject": "payCode",
+        "type": true,
+        "isEmpty": true
+      },
+      {
+        "txt": "还款码",
+        "reject": "repayCode",
+        "type": true,
+        "isEmpty": true
+      }
+    ],
+    "detailHeader": "借款信息",
+    "yqTip": "逾期扣取2.2%的日利息",
+    "revMoney": "实际还款金额",
+    "knows": "还款须知!"
+  },
+  "loanFail": {
+    "order": "再拿出来",
+    "wait": "无法清除银行贷款，确认提款账户信息，再次提款。 "
+  },
+  "cash": {
+    "title": "亲爱的用户，您已成功申请贷款",
+    "order": "现在收到"
+  },
+  "repay": {
+    "order": "支付",
+    "head": "缺乏",
+    "foot": "付出的日子",
+    "first": "亲爱的用户，拜托， ",
+    "sec": "以前付钱",
+    "third_head": "到期日后，罚款",
+    "third_foot": " 每个月。",
+    "fouth": "在产品发布期间，不收取其他费用。",
+    "unit": "值得支付（R$）"
+  },
+  "overDue": {
+    "order": "支付",
+    "head": "发票在截止日期前到期",
+    "foot": "天！",
+    "first": "亲爱的用户，拜托，",
+    "sec": "以前付钱",
+    "third_head": "亲爱的用户，很快付款。 到期日后，罚款",
+    "third_foot": "每个月。 在产品发布期间，不收取其他费用。",
+    "fouth": "在产品发布期间，不要收取其他费用。",
+    "unit": "值得支付（R$）"
+  },
+  "account": {
+    "takeCash": {
+      "title": "交易密码设置",
+      "subTitle": "请输入6位数字",
+      "tip": "交易密码用于支付资金，请保证安全"
+    }
+  },
+  "repayQr": {
+    "title": "关于付款",
+    "qrTitle": "钢坯",
+    "acountTitle": "付款帐户",
+    "magnify": "点按即可查看更大的图片",
+    "copyTitle": "复制代码",
+    "copyBtn": "复制",
+    "sendEmailTitle": "通过电子邮件发送此页面",
+    "sendEmailBtn": "发送",
+    "tips": "已经付款了，请记住MyLoan",
+    "copySuccessTxt": "复制成功",
+    "sendEmailSuccess": "成功发送",
+    "emailTitle": "通过电子邮件发送票证",
+    "emailInput": "E-mail:",
+    "confirm": "确认",
+    "Cancelar": "取消"
+  },
+  "operate": {
+    "copy": "复制"
+  },
+  "orderList": {
+    "title": "历史订单",
+    "time": "创建时间",
+    "status": "订单状态",
+    "award": "优惠券",
+    "amount": "贷款金额",
+    "limit": "贷款期限",
+    "tax": "每日利率",
+    "rate": "贷款利息",
+    "shouldPay": "值得支付",
+    "account": "收据帐户",
+    "empty": "未选中",
+    "confirm": "要批准您帐户的机密性，请创建一个交易密码",
+    "padTitle": "输入付款密码",
+    "allowConfirm": "请同意条款",
+    "noBind": "未选中",
+    "federalTax": "IOF"
+  },
+  "msgCenter": {
+    "title": "消息中心"
+  },
+  "serviceCenter": {
+    "title": "客户服务",
+    "smallTitle": {
+      "left": "在线查询",
+      "right": "电话咨询"
+    },
+    "feedBack": {
+      "title": "在线查询",
+      "selectTitle": "回复图标",
+      "content": "评论的内容",
+      "eMail": "E-mail",
+      "email": "123",
+      "telPhone": "电话号码",
+      "tel": " 123sa"
+    },
+    "email": "输入邮箱",
+    "tel": "输入电话号码"
+  },
+  "about": {
+    "title": "关于我们",
+    "intro": {
+      "content": "Panshi是一家技术驱动型公司，已投入数十亿人民币来推动自身产品的开发和升级，自主创建了DSP平台，RTB系统，SSP平台，ADExchange和DMP数据管理系统。 大数据系统本身拥有超过3000台服务器，为互联网金融业务提供超过10T的数据支持。",
+      "footer": "直到2018年初，Panshi拥有13家子公司和2000多名员工。"
+    },
+    "dataCount": {
+      "title": "根据2018年初的统计数据",
+      "list": [
+        "收集100多个国家",
+        "通过400,000多个网站",
+        "参与36个以上的行业",
+        "每天10亿次页面浏览量",
+        "多个国家95％的互联网覆盖率"
+      ]
+    },
+    "product": {
+      "title": "关于我们",
+      "block": [
+        {
+          "title": "",
+          "contents": [
+            "简单、便捷、安全，一站式金融服务！",
+            "无抵押贷款，您的信任是我们最宝贵的财富；",
+            "一次无忧认证，有效期内随时可借，贷款额度任意选；",
+            "100%在线操作，24小时营业；",
+            "熊猫金融让您的生活更加美好！"
+          ],
+          "subContenes": []
+        }
+      ]
+    }
+  },
+  "aboutRepay": {
+    "title": "关于付款",
+    "block": [
+      {
+        "title": "付款流程",
+        "list": [
+          "打开MyLoan应用程序，查看票证代码。",
+          "进行银行转帐，记下申请帐户（手机号码）和真实姓名。"
+        ]
+      },
+      {
+        "title": "备注",
+        "list": [
+          "为确保付款成功，请在付款时仔细确认支付金额是否正确。",
+          "请务必在备注框中填写您的真实姓名和手机号码，以便我们验证您的付款信息。"
+        ]
+      }
+    ]
+  },
+  "config": {
+    "title": "设置",
+    "oper": {
+      "payPass": "修改付款密码",
+      "userPass": "修改登录密码",
+      "aboutUs": "关于我们"
+    },
+    "version": "版本"
+  },
+  "confirm": {
+    "title": "订单详情",
+    "btn": "确认贷款",
+    "contract": "同意“条款和条件”"
+  },
+  "makeAccount": {
+    "title": "目标帐户",
+    "tip": "错误的帐户/不符合帐户所有者的帐户将阻碍资金的支付",
+    "bank": "银行名称",
+    "institutionNumber": "银行编码",
+    "bankCardNum": "银行卡号",
+    "userName": "所有人姓名",
+    "accountCode": "帐号"
+  },
+  "feedback": {
+    "title": "Feedback",
+    "prompt": "kritik dan saran sangat membantu kami !",
+    "lable1": "kritik dan saran anda - wajib diisi",
+    "input": "isi pesan",
+    "lable2": "tambahkan gambar(screenshot)",
+    "add": "Upload"
+  },
+  "review": {
+    "titles": [
+      "使用贷款",
+      "CPF验证",
+      "Indentifikasi KTP",
+      "您的信息",
+      "收入证明",
+      "紧急联系"
+    ],
+    "steps": {
+      "first": "借款申请",
+      "noinput": "未输入",
+      "isinput": "已输入",
+      "truebutton": "提交借款申请",
+      "cpf": "CPF验证",
+      "userAuth": "身份证认证",
+      "confim": "身份证信息确认",
+      "userInfo": "个人信息",
+      "income": "工作信息",
+      "contact": "联系人信息",
+      "shop": "运营商信息"
+    },
+    "certi": {
+      "personInfo": "实名信息",
+      "personInfoa": "个人信息",
+      "incomeInfo": "工作信息",
+      "contract": "联系人信息",
+      "shop": "运营商信息"
+    },
+    "cpf": {
+      "content": "亲爱的用户，如果您的CPF查询在SPC中为负，MyLoan将无法为您提供贷款。 如果信用状况正常，MyLoan将继续处理您的请求。",
+      "access": {
+        "top": "我授权银行咨询CPF",
+        "bottom": "我授权MyLoan在SPC咨询CPF"
+      }
+    },
+    "auth": {
+      "front": "上传身份证正面照片",
+      "back": "拍一张RG背面的照片",
+      "hand": "在你的脸旁拍下你的RG照片",
+      "input": {
+        "id": "身份证号码",
+        "name": "姓名",
+        "next": "确认正确，下一步",
+        "priv": "错误信息，重新拍摄身份证"
+      },
+      "getfail": "识别失败，请重试",
+      "placeHolder": {
+        "id": "请输入",
+        "name": "请输入",
+        "fatherName": "父亲的姓氏",
+        "motherName": "母亲的姓氏"
+      }
+    },
+    "baicInfo": {
+      "title": "为保证借款顺利进行，请如实填写个人信息。",
+      "input": {
+        "usernameShort": "我们怎么称呼你？",
+        "childNumber": "您的孩子数量",
+        "motherName": "亲生母亲姓名",
+        "gender": "性别",
+        "birthday": "出生日期",
+        "birthplace": "出生之城",
+        "educationBackground": "您的教育程度",
+        "maritalStatus": "您的婚姻状况",
+        "address": "居住地详细地址",
+        "residentialType": "当前居住地类型",
+        "residentialDuration": "居住时长",
+        "whatsapp": "whatsapp账号"
+      },
+      "placeHolder": {
+        "city": "市",
+        "regent": "摄政",
+        "block": "区",
+        "street": "街道详细地址",
+        "currentResidential": "详细输入街道地址",
+        "homeTel": "输入住宅电话",
+        "homeTelephoneAreaCode": "DDD"
+      }
+    },
+    "income": {
+      "title": "为保证借款顺利进行，请如实填写个人工作情况。",
+      "input": {
+        "socialIdentityCode": "社会身份/工作类型",
+        "companyName": "公司名称",
+        "monthlyIncome": "月收入（Rp）",
+        "companyadress": "公司地址",
+        "telphone": "公司电话",
+        "incomeProof": {
+          "title": "工作证明",
+          "explain": "工资单/银行对帐单的完整照片"
+        }
+      },
+      "placeHolder": {
+        "otherIncomeSource": "插入另一个收入来源"
+      }
+    },
+    "contact": {
+      "title": "！Disarankan untuk mengisi data orang tua /  pasangan Anda.",
+      "select": "选择联系人",
+      "input": {
+        "title": "紧急联系人",
+        "relation": "请选择与您的关系",
+        "contactName": "请输入联系人全名",
+        "contactPhone": "点击添加联系人电话"
+      }
+    },
+    "carrier": {
+      "title": "当前账户授权",
+      "chooseShop": "请选择一个运营商",
+      "vtime": "剩余时间",
+      "second": "秒",
+      "input": {
+        "title": "当前账户授权",
+        "shop": "运营商",
+        "ycode": "验证码",
+        "ycodehoder": "请输入验证码",
+        "shouquan": "授权运营商数据查询"
+      }
+    }
+  },
+  "oper": {
+    "next": "下一步",
+    "chose": "请选择",
+    "input": "请输入",
+    "cancel": "取消",
+    "sure": "确认",
+    "enter": "Entrar"
+  },
+  "enum": {
+    "child": [
+      {
+        "name": "NIHL",
+        "value": "0"
+      },
+      {
+        "name": "SATU",
+        "value": "1"
+      },
+      {
+        "name": "DUA",
+        "value": "2"
+      },
+      {
+        "name": "TIGA",
+        "value": "3"
+      },
+      {
+        "name": "EMPAT",
+        "value": "4"
+      },
+      {
+        "name": "DI_ATAS_EMPAT",
+        "value": "5"
+      }
+    ],
+    "provinceCode": [
+      {
+        "name": "Aceh",
+        "value": "1"
+      },
+      {
+        "name": "Bali",
+        "value": "2"
+      },
+      {
+        "name": "Babel",
+        "value": "3"
+      },
+      {
+        "name": "Banten",
+        "value": "4"
+      },
+      {
+        "name": "Bengkulu",
+        "value": "5"
+      },
+      {
+        "name": "Jateng",
+        "value": "6"
+      },
+      {
+        "name": "Kalteng",
+        "value": "7"
+      },
+      {
+        "name": "Sulteng",
+        "value": "8"
+      },
+      {
+        "name": "Jatim",
+        "value": "9"
+      },
+      {
+        "name": "Kaltim",
+        "value": "10"
+      },
+      {
+        "name": "NTT",
+        "value": "11"
+      },
+      {
+        "name": "Gorontalo",
+        "value": "12"
+      },
+      {
+        "name": "DKI",
+        "value": "13"
+      },
+      {
+        "name": "Jambi",
+        "value": "14"
+      },
+      {
+        "name": "Lampung",
+        "value": "15"
+      },
+      {
+        "name": "Maluku",
+        "value": "16"
+      },
+      {
+        "name": "Kaltara",
+        "value": "17"
+      },
+      {
+        "name": "Malut",
+        "value": "18"
+      },
+      {
+        "name": "Sulut",
+        "value": "19"
+      },
+      {
+        "name": "Sumut",
+        "value": "20"
+      },
+      {
+        "name": "Papua",
+        "value": "21"
+      },
+      {
+        "name": "Riau",
+        "value": "22"
+      },
+      {
+        "name": "Kepri",
+        "value": "23"
+      },
+      {
+        "name": "Sultra",
+        "value": "24"
+      },
+      {
+        "name": "Kalsel",
+        "value": "25"
+      },
+      {
+        "name": "Sulsel",
+        "value": "26"
+      },
+      {
+        "name": "Sumsel",
+        "value": "27"
+      },
+      {
+        "name": "Jabar",
+        "value": "28"
+      },
+      {
+        "name": "Kalbar",
+        "value": "29"
+      },
+      {
+        "name": "NTB",
+        "value": "30"
+      },
+      {
+        "name": "PB",
+        "value": "31"
+      },
+      {
+        "name": "Sulbar",
+        "value": "32"
+      },
+      {
+        "name": "Sumbar",
+        "value": "33"
+      },
+      {
+        "name": "DIY",
+        "value": "34"
+      }
+    ],
+    "edu": [
+      {
+        "name": "DIPLOMA_I",
+        "value": "1"
+      },
+      {
+        "name": "DIPLOMA_II",
+        "value": "2"
+      },
+      {
+        "name": "DIPLOMA_III",
+        "value": "3"
+      },
+      {
+        "name": "SLTA",
+        "value": "4"
+      },
+      {
+        "name": "S1",
+        "value": "5"
+      },
+      {
+        "name": "SLTP",
+        "value": "6"
+      },
+      {
+        "name": "S2",
+        "value": "7"
+      },
+      {
+        "name": "SD",
+        "value": "8"
+      },
+      {
+        "name": "S3",
+        "value": "9"
+      }
+    ],
+    "marry": [
+      {
+        "name": "LAJANG",
+        "value": "0"
+      },
+      {
+        "name": "MENIKAH",
+        "value": "1"
+      },
+      {
+        "name": "CERAI",
+        "value": "2"
+      },
+      {
+        "name": "LAINNYA",
+        "value": "3"
+      }
+    ],
+    "local": [
+      {
+        "name": "PROVINSI",
+        "value": "1"
+      },
+      {
+        "name": "KOTA",
+        "value": "2"
+      },
+      {
+        "name": "KECAMATAN",
+        "value": "3"
+      },
+      {
+        "name": "KELURAHAN",
+        "value": "4"
+      }
+    ],
+    "histime": [
+      {
+        "name": "TIGA_BULAN",
+        "value": "1"
+      },
+      {
+        "name": "ENAM_BULAN",
+        "value": "2"
+      },
+      {
+        "name": "SATU_TAHUN",
+        "value": "3"
+      },
+      {
+        "name": "DUA_TAHUN",
+        "value": "4"
+      },
+      {
+        "name": "DI_ATAS_DUA_TAHUN",
+        "value": "5"
+      }
+    ],
+    "well": [
+      {
+        "name": "1 ano",
+        "value": "1"
+      },
+      {
+        "name": "2 anos",
+        "value": "2"
+      },
+      {
+        "name": "3 anos e superior",
+        "value": "3"
+      }
+    ],
+    "socialRole": [
+      {
+        "name": "会计/财务官",
+        "value": "1"
+      },
+      {
+        "name": "客户服务",
+        "value": "2"
+      },
+      {
+        "name": "工程",
+        "value": "3"
+      },
+      {
+        "name": "执行",
+        "value": "4"
+      },
+      {
+        "name": "一般管理",
+        "value": "5"
+      },
+      {
+        "name": "顾问/分析师",
+        "value": "6"
+      },
+      {
+        "name": "营销",
+        "value": "7"
+      },
+      {
+        "name": "老师",
+        "value": "8"
+      },
+      {
+        "name": "军队",
+        "value": "9"
+      },
+      {
+        "name": "退休",
+        "value": "10"
+      },
+      {
+        "name": "学生/学生",
+        "value": "11"
+      },
+      {
+        "name": "企业家",
+        "value": "12"
+      },
+      {
+        "name": "警察",
+        "value": "13"
+      },
+      {
+        "name": "农民",
+        "value": "14"
+      },
+      {
+        "name": "渔",
+        "value": "15"
+      },
+      {
+        "name": "饲养员",
+        "value": "16"
+      },
+      {
+        "name": "医生",
+        "value": "17"
+      },
+      {
+        "name": "医务人员",
+        "value": "18"
+      },
+      {
+        "name": "法律（律师，公证人）",
+        "value": "19"
+      },
+      {
+        "name": "研究员",
+        "value": "20"
+      },
+      {
+        "name": "设计师",
+        "value": "21"
+      },
+      {
+        "name": "建筑师",
+        "value": "22"
+      },
+      {
+        "name": "艺术工作者",
+        "value": "23"
+      },
+      {
+        "name": "安全",
+        "value": "24"
+      },
+      {
+        "name": "经纪人/经纪人",
+        "value": "25"
+      },
+      {
+        "name": "经销商",
+        "value": "26"
+      },
+      {
+        "name": "航空运输",
+        "value": "27"
+      },
+      {
+        "name": "海运",
+        "value": "28"
+      },
+      {
+        "name": "陆路运输",
+        "value": "29"
+      },
+      {
+        "name": "劳动者（工厂工人，建筑工人，农场工人）",
+        "value": "30"
+      },
+      {
+        "name": "木工和工匠",
+        "value": "31"
+      },
+      {
+        "name": "家庭主妇",
+        "value": "32"
+      },
+      {
+        "name": "州官员/组织者",
+        "value": "33"
+      },
+      {
+        "name": "政府官员/国家机构/（国家官员/组织者除外）",
+        "value": "34"
+      },
+      {
+        "name": "非正式工人（家庭助理，小贩等）",
+        "value": "35"
+      },
+      {
+        "name": "其他",
+        "value": "36"
+      }
+    ],
+    "income": [
+      {
+        "name": "di bawah 2000000",
+        "value": "1"
+      },
+      {
+        "name": "Antara 2000000 dan 4000000",
+        "value": "2"
+      },
+      {
+        "name": "Antara 4000000 dan 8000000",
+        "value": "3"
+      },
+      {
+        "name": "di atas 8000000",
+        "value": "4"
+      }
+    ],
+    "incomeType": [
+      {
+        "name": "Dinheiro à vista",
+        "value": "1"
+      },
+      {
+        "name": "Transferência bancária",
+        "value": "2"
+      },
+      {
+        "name": "Cheque",
+        "value": "3"
+      }
+    ],
+    "relation": [
+      {
+        "name": "父亲",
+        "value": "1"
+      },
+      {
+        "name": "母亲",
+        "value": "2"
+      },
+      {
+        "name": "配偶",
+        "value": "3"
+      },
+      {
+        "name": "子女",
+        "value": "4"
+      },
+      {
+        "name": "同事",
+        "value": "5"
+      },
+      {
+        "name": "朋友",
+        "value": "6"
+      },
+      {
+        "name": "亲属",
+        "value": "7"
+      }
+    ],
+    "accountType": [
+      {
+        "name": "Conta corrente",
+        "value": "1"
+      }
+    ]
+  },
+  "forget": {
+    "userPass": {
+      "raw": "输入原始密码",
+      "now": "输入新密码",
+      "again": "重新输入新密码",
+      "forget": "忘记登录密码"
+    },
+    "payPass": {
+      "raw": "输入原始密码",
+      "now": "输入新密码",
+      "again": "重新输入新密码",
+      "forget": "忘记密码"
+    }
+  },
+  "orderDetail": {
+    "title": "借款详情",
+    "orderNo": "订单号",
+    "borrowTime": "借款日期",
+    "auditMoney": "借款金额（Rupiah）",
+    "loanDays": "借款期限",
+    "lendRate": "借款日利率",
+    "monthAuditCharge": "每笔审核服务费",
+    "monthTechnologyCharge": "每笔技术服务费",
+    "currentRepay": "应还金额（Rupiah）",
+    "repayDate": "应还日期",
+    "IVA": "逾期费用（Rupiah）",
+    "currentRealRepay": "实际应还金额（Rupiah）",
+    "realRepay": "实际还款金额（Rupiah）",
+    "cleanDate": "结清日期",
+    "seeCont": "查看《借款合同》"
+  },
+  "repayProof": {
+    "title": "还款证明",
+    "orderNo": "订单号",
+    "repayType": "还款类型",
+    "repayMoney": "还款金额（雷亚尔）",
+    "repayProof": "还款证明"
+  }
+}

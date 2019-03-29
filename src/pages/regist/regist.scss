@@ -1,0 +1,74 @@
+page-regist {
+}
+.formWrap {
+  margin-top: 0.416667rem;
+  background: #fff;
+}
+.regist_formGroup {
+  height: 1.388889rem;
+}
+.regist_left {
+  width: 1.666667rem;
+  height: 100%;
+  position: relative;
+}
+.regist_right {
+  width: 8.333333rem;
+  height: 100%;
+  position: relative;
+}
+
+.regist_icon {
+  width: 0.430556rem;
+  height: 0.638889rem;
+  display: block;
+}
+.regist_border {
+  border-bottom: 1px solid rgba(224, 224, 224, 1);
+}
+.regist_input {
+  width: 100%;
+  border: none;
+  margin: 0px;
+  padding: 0px;
+  line-height: 1.388889rem;
+  font-size: 0.444444rem;
+  color: #cccccc;
+}
+
+.regist_cross {
+  width: 0.333333rem;
+  height: 0.333333rem;
+  position: absolute;
+  right: 0.555556rem;
+  top: 15%;
+  margin-top: 0.333333rem;
+}
+.regist_wrap {
+  padding: 0 0.597222rem;
+}
+.regist_access {
+  width: 100%;
+  margin-top: 0.555556rem;
+}
+.regist_checkbox {
+  width: 0.444444rem;
+  height: 0.444444rem;
+  margin-right: 0.625rem;
+}
+
+.icoDefault {
+  background: url("../../assets/imgs/regist/check.png") center;
+  background-size: contain;
+}
+
+.icoActive {
+  background: url("../../assets/imgs/regist/checked.png") center;
+  background-size: contain;
+}
+
+.regist_access_right {
+  font-size: 0.333333rem;
+  color: rgba(170, 170, 170, 1);
+  line-height: 0.402778rem;
+}

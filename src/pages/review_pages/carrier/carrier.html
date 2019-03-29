@@ -1,0 +1,87 @@
+<common-header
+  [centerTxt]="'review.steps.shop' | translate"
+  [leftFn]="back"
+  [parent]="parent"
+></common-header>
+<ion-content class="certification_list_wrap">
+  
+  
+  <div class="usrAuth_form c-flex-column-start">
+    <div class="c-input-group yanzhengma">
+      <div class="c-input-title">
+        {{ "review.carrier.input.title" | translate }}
+      </div>
+      <div class="c-input-title">
+        +62 {{phone}}
+      </div>
+      <form [formGroup]="validForm" class="c-form-wrap">
+      <!-- 运营商 -->
+        <div class="c-input-title c-required">
+          {{ "review.carrier.input.shop" | translate }}
+        </div>
+        <div style="position: relative;height: 1.388889rem;">
+          <ion-select
+            formControlName='opearatorType'
+            class="c-form-input userInfo_section_gap"
+            style="line-height: calc(1.277778rem - 22px)"
+            [cancelText]='"oper.cancel" | translate'
+            [okText]='"oper.sure" | translate'
+            [placeholder] = ' "oper.chose" | translate '
+            (click)="makeRecord('opearatorType')"
+          >
+            <ion-option *ngFor='let item of enum_edu' [value]='item.value'>
+              {{ item.name }}
+            </ion-option>
+          </ion-select>
+          <div style="opacity: 0 ;z-index:99;margin-bottom: .416667rem;position: absolute;top:0px;left:0px;width: 100% ; height: 100%"
+            (click)="showModel('enum_edu' , 'opearatorType')">
+            <input
+              type="text"
+              class="c-input-item userInfo_section_gap"
+              [placeholder] = ' "oper.chose" | translate '
+              id = 'opearatorType'
+              readonly="true"
+            >
+            <ion-icon ios="md-arrow-dropdown" md="md-arrow-dropdown" class="userInfo_icon"></ion-icon>
+          </div>
+        </div>
+      </form>
+
+      <!-- 验证码 -->
+      <div class="c-input-title" style="margin-top: 15px;">
+        {{ "review.carrier.input.ycode" | translate }}
+      </div>
+      <input
+        type="text"
+        class="c-input-item info-input"
+        [placeholder]=' "review.carrier.input.ycodehoder" | translate '
+        [(ngModel)]="inputValue"
+      />
+      <button [disabled]="isSending" class="c-color-blue button send-btn" (click)="send($event)" nz-button nzType="default">{{sendMsg}}</button>
+    </div>
+    <div class="regist_access c-flex-row-start" style="padding:0 .597222rem;">
+      <div class="regist_access_left">
+        <div
+          class="regist_checkbox"
+          [ngClass]="{ icoActive: check == true, icoDefault: check == false }"
+          (click)="access()"
+          style="margin-right: 5px"
+        ></div>
+        <!-- <ion-icon class='regist_checkbox' name="ios-checkbox" [ngClass] = '{"icoActive" : first == true , "icoDefault" : first == false }' ></ion-icon> -->
+      </div>
+      <div class="regist_access_right">
+        <div
+          style="color: #2CC0FF;"
+        >
+        {{ "review.carrier.input.shouquan" | translate }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="btn-group">
+    <button class="c-color-blue button" (click)="nextBtn($event)" [disabled]="!(inputValue && sendSuccess && check)"> <!--  [disabled]="!(inputValue && sendSuccess && check)" -->
+      {{ "oper.next"  | translate}}
+    </button>
+  </div>
+  <div class="spinner_tip" *ngIf="showLoading"></div>
+</ion-content>

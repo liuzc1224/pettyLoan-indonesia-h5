@@ -1,0 +1,39 @@
+
+.item-block{
+  min-height: .388889rem;
+}
+.loan-tip{
+  color: #CCCCCC;
+  font-size: .416667rem;
+  text-align: center;
+  line-height: .541667rem;
+  margin: .666667rem .875rem;
+}
+.yanzhengma{
+  line-height: 20px;
+  .info-input{
+    width: 70%;
+    height: 1.388889rem;
+    border-radius: 0px;
+  }
+  .send-btn{
+    width: 30%;
+    height: 1.388889rem;
+    margin-top: -0.263889rem;
+    margin-left: -0.361111rem;
+    border-radius: 0px;
+    font-size: .416667rem;
+  }
+}
+.icoDefault {
+  background: url("../../../assets/imgs/regist/check.png") center;
+  background-size: contain;
+}
+
+.icoActive {
+  background: url("../../../assets/imgs/regist/checked.png") center;
+  background-size: contain;
+}
+.btn-group{
+  padding: .555556rem;
+}

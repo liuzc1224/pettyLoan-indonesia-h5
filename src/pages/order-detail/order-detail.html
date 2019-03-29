@@ -1,0 +1,178 @@
+<common-header [centerTxt]="'orderDetail.title' | translate"></common-header>
+
+<ion-content style="background:rgb(245, 245, 245)">
+  <div class="spinner_tip" *ngIf="!resMark"></div>
+
+  <div *ngIf="resMark">
+    <div class="orderDetail_wrap">
+      <!-- 订单编号 -->
+      <div class="orderDetail_section">
+        <div>{{ "orderDetail.orderNo" | translate }} :</div>
+        <div class="color:rgba(51,51,51,1);" *ngIf="orderInfo">
+          {{ orderInfo.orderNo }}
+        </div>
+      </div>
+
+      <!-- 借款日期 -->
+      <div class="orderDetail_section">
+        <div>{{ "orderDetail.borrowTime" | translate }} :</div>
+        <div class="color:rgba(51,51,51,1);" *ngIf="orderInfo">
+          {{ orderInfo.stringBorrowTime }}
+        </div>
+      </div>
+
+      <!-- 借款金额 -->
+      <div class="orderDetail_section">
+        <div>{{ "orderDetail.auditMoney" | translate }} :</div>
+        <div class="color:rgba(51,51,51,1);" *ngIf="orderInfo">
+          {{
+            orderInfo.auditMoney ? orderInfo.auditMoney : orderInfo.applyMoney
+          }},00
+        </div>
+      </div>
+
+      <!-- 借款期限 -->
+      <div class="orderDetail_section">
+        <div>{{ "orderDetail.loanDays" | translate }} :</div>
+        <div
+          class="color:rgba(51,51,51,1);"
+          *ngIf="orderInfo"
+        >
+          {{ orderInfo.loanDays }} Hari
+        </div>
+      </div>
+
+      <!-- 借款日利率 -->
+      <div class="orderDetail_section">
+        <div *ngIf="orderInfo">
+          {{ "orderDetail.lendRate" | translate }} :
+        </div>
+        <div class="color:rgba(51,51,51,1);" *ngIf="orderInfo">
+          {{ (orderInfo.lendRate * 100).toFixed(2) }}%
+        </div>
+      </div>
+
+      <!-- 每笔审核服务费 -->
+      <div
+        class="orderDetail_section"
+        *ngIf="orderInfo"
+      >
+        <div>{{ "orderDetail.monthAuditCharge" | translate }} :</div>
+        <div class="color:rgba(51,51,51,1);" *ngIf="orderInfo">
+          {{ (orderInfo.auditRate * 100).toFixed(2) || 0 }}%
+        </div>
+      </div>
+
+      <!-- 每笔技术服务费 -->
+      <div
+        class="orderDetail_section"
+        *ngIf="orderInfo"
+      >
+        <div>{{ "orderDetail.monthTechnologyCharge" | translate }} :</div>
+        <div class="color:rgba(51,51,51,1);" *ngIf="orderInfo">
+          {{ (orderInfo.technologyRate * 100).toFixed(2) || 0 }}%
+        </div>
+      </div>
+
+      <!-- 应还金额（Rupiah） -->
+      <div class="orderDetail_section">
+          <div>{{ "orderDetail.currentRepay" | translate }} :</div>
+          <div class="color:rgba(51,51,51,1);" *ngIf="orderInfo">
+            {{ (orderInfo.currentRepay || 0).toFixed(2) | MoneyFormatPipe }}
+          </div>
+      </div>
+
+      <!-- 应还日期 -->
+      <div
+        class="orderDetail_section"
+        *ngIf="orderInfo && orderInfo.orderType != 1"
+      >
+        <div>{{ "orderDetail.repayDate" | translate }} :</div>
+        <div class="color:rgba(51,51,51,1);" *ngIf="orderInfo">
+          {{ orderInfo.stringRepayTime }}
+        </div>
+      </div>
+
+      <!-- 逾期费用（Rupiah） -->
+      <div class="orderDetail_section" *ngIf="orderInfo">
+        <div>{{ "orderDetail.IVA" | translate }} :</div>
+        <div class="color:rgba(51,51,51,1);" *ngIf="orderInfo">
+          R$
+          {{
+            (orderInfo.overDueRateMoney
+              ? orderInfo.overDueRateMoney
+              : 0
+            ).toFixed(2) | MoneyFormatPipe
+          }}
+        </div>
+      </div>
+
+      <!-- 实际应还金额（Rupiah） -->
+      <div class="orderDetail_section">
+          <div>{{ "orderDetail.currentRealRepay" | translate }} :</div>
+          <div class="color:rgba(51,51,51,1);" *ngIf="orderInfo">
+            {{ (orderInfo.realCurrentRepay || 0).toFixed(2) | MoneyFormatPipe }}
+          </div>
+      </div>
+
+      <!-- 实际还款金额（Rupiah） -->
+      <div class="orderDetail_section">
+          <div>{{ "orderDetail.realRepay" | translate }} :</div>
+          <div class="color:rgba(51,51,51,1);" *ngIf="orderInfo">
+            {{ (orderInfo.realRepayMoney || 0).toFixed(2) | MoneyFormatPipe }}
+          </div>
+      </div>
+
+      <!-- 结清日期 -->
+      <div class="orderDetail_section" *ngIf="orderInfo">
+        <div>{{ "orderDetail.cleanDate" | translate }} :</div>
+        <div class="color:rgba(51,51,51,1);" *ngIf="orderInfo">
+          {{ orderInfo.finishDate }}
+        </div>
+      </div>
+
+      <div class="orderDetail_payInfo">
+        <!-- 查看《借款合同》 -->
+        <div class="orderDetail_section">
+          <div (click)="goContract()" style="color: #aaaaaa;text-decoration: underline;">{{ "orderDetail.seeCont" | translate }}</div>
+        </div>
+      </div>
+
+      <!-- 优惠券 -->
+      <!-- <div class="orderDetail_section">
+                <div>
+                    {{ "orderDetail.award" | translate }} :
+                </div>
+                <div class="color:rgba(51,51,51,1);" *ngIf="orderInfo">
+                    R${{ orderInfo.couponAmount}},00
+                </div>
+            </div> -->
+
+    </div>
+
+    <!-- <div
+      class="c-flex-row-center"
+      *ngIf="orderInfo && orderInfo['status'] == 4 && orderInfo.orderType != 1"
+    >
+      <button class="c-color-blue home_button" (click)="transToQr($event)">
+        {{ "orderDetail.lookQr" | translate }}
+      </button>
+    </div> -->
+
+    <div class="audit_footer" style="margin-top: 20px" *ngIf="orderInfo">
+      <img
+        src="../../assets/imgs/side/service.png"
+        alt=""
+        class="audit_icon_footer"
+      />
+      <div class="audit_textWrap c-flex-column-center">
+        <!-- <span style="margin-bottom: 5px;">
+          {{ "audit.notYou" | translate }}
+        </span> -->
+        <span class="c-text-blue" style="text-decoration: underline;" (click)="transSevice()">
+          {{ "audit.contact" | translate }}
+        </span>
+      </div>
+    </div>
+  </div>
+</ion-content>

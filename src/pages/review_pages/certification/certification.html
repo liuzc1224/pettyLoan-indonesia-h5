@@ -1,0 +1,87 @@
+<common-header
+  [centerTxt]="'review.steps.first' | translate"
+  [leftFn]="back"
+  [parent]="parent"
+></common-header>
+<ion-content class="certification_list_wrap">
+  <ion-card>
+    <ion-item
+      [class]='listStatus.identify.status == 1 ? "certification_list_item success item item-block item-ios" : "certification_list_item item item-block item-ios"'
+      (click)="buttonClick(0)">
+      <ion-label class="item-lable">
+        <img *ngIf='listStatus.identify.status == 0' src="../../../assets/imgs/loan/identify.png" alt="">
+        <img *ngIf='listStatus.identify.status == 1' src="../../../assets/imgs/loan/identify2.png" alt="">
+        <i class="ion ion-load-a"></i>
+        <span>{{ "review.certi.personInfo" | translate }}</span>
+        <span *ngIf="listStatus.identify.status == 1">{{ "review.steps.isinput" | translate }}</span>
+        <span *ngIf="listStatus.identify.status == 0">{{ "review.steps.noinput" | translate }}</span>
+        <ion-icon class="icon-forward" name="arrow-forward"></ion-icon>
+      </ion-label>
+    </ion-item>
+  </ion-card>
+  <ion-card>
+    <ion-item
+      [class]='listStatus.person.status == 1 ? "certification_list_item success item item-block item-ios" : "certification_list_item item item-block item-ios"'
+      (click)="buttonClick(1)">
+      <ion-label class="item-lable">
+        <img *ngIf='listStatus.person.status == 0' src="../../../assets/imgs/loan/person-info.png" alt="">
+        <img *ngIf='listStatus.person.status == 1' src="../../../assets/imgs/loan/person-info2.png" alt="">
+        <i class="ion ion-load-a"></i>
+        <span>{{ "review.certi.personInfoa" | translate }}</span>
+        <span *ngIf="listStatus.person.status == 1">{{ "review.steps.isinput" | translate }}</span>
+        <span *ngIf="listStatus.person.status == 0">{{ "review.steps.noinput" | translate }}</span>
+        <ion-icon class="icon-forward" name="arrow-forward"></ion-icon>
+      </ion-label>
+    </ion-item>
+  </ion-card>
+  <ion-card>
+    <ion-item
+      [class]='listStatus.work.status == 1 ? "certification_list_item success item item-block item-ios" : "certification_list_item item item-block item-ios"'
+      (click)="buttonClick(2)">
+      <ion-label class="item-lable">
+        <img *ngIf='listStatus.work.status == 0' src="../../../assets/imgs/loan/work-info.png" alt="">
+        <img *ngIf='listStatus.work.status == 1' src="../../../assets/imgs/loan/work-info2.png" alt="">
+        <i class="ion ion-load-a"></i>
+        <span>{{ "review.certi.incomeInfo" | translate }}</span>
+        <span *ngIf="listStatus.work.status == 1">{{ "review.steps.isinput" | translate }}</span>
+        <span *ngIf="listStatus.work.status == 0">{{ "review.steps.noinput" | translate }}</span>
+        <ion-icon class="icon-forward" name="arrow-forward"></ion-icon>
+      </ion-label>
+    </ion-item>
+  </ion-card>
+  <ion-card>
+    <ion-item
+      [class]='listStatus.relation.status == 1 ? "certification_list_item success item item-block item-ios" : "certification_list_item item item-block item-ios"'
+      (click)="buttonClick(3)">
+      <ion-label class="item-lable">
+        <img *ngIf='listStatus.relation.status == 0' src="../../../assets/imgs/loan/relation-info.png" alt="">
+        <img *ngIf='listStatus.relation.status == 1' src="../../../assets/imgs/loan/relation-info2.png" alt="">
+        <i class="ion ion-load-a"></i>
+        <span>{{ "review.certi.contract" | translate }}</span>
+        <span *ngIf="listStatus.relation.status == 1">{{ "review.steps.isinput" | translate }}</span>
+        <span *ngIf="listStatus.relation.status == 0">{{ "review.steps.noinput" | translate }}</span>
+        <ion-icon class="icon-forward" name="arrow-forward"></ion-icon>
+      </ion-label>
+    </ion-item>
+  </ion-card>
+  <ion-card *ngIf="showShop">
+    <ion-item
+      [class]='listStatus.shop.status == 1 ? "certification_list_item success item item-block item-ios" : "certification_list_item item item-block item-ios"'
+      (click)="buttonClick(4)">
+      <ion-label class="item-lable">
+        <img *ngIf='listStatus.shop.status == 0' src="../../../assets/imgs/loan/shop-info.png" alt="">
+        <img *ngIf='listStatus.shop.status == 1' src="../../../assets/imgs/loan/shop-info2.png" alt="">
+        <i class="ion ion-load-a"></i>
+        <span>{{ "review.certi.shop" | translate }}</span>
+        <span *ngIf="listStatus.shop.status == 1">{{ "review.steps.isinput" | translate }}</span>
+        <span *ngIf="listStatus.shop.status == 0">{{ "review.steps.noinput" | translate }}</span>
+        <ion-icon class="icon-forward" name="arrow-forward"></ion-icon>
+      </ion-label>
+    </ion-item>
+  </ion-card>
+  <p class="loan-tip">Informasi yang diisi harus sesuai dengan data pribadi yang sebenarnya, agar segera dapat melewati proses verifikasi</p>
+  <button style="position: absolute;bottom:0px;border-radius: 0px;" class="c-color-blue button" (click)="nextBtn($event)" [disabled]="!submitAllow"><!--  [disabled]="!submitAllow" -->
+    {{ "review.steps.truebutton" | translate }}
+  </button>
+  <div class="spinner_tip" *ngIf="showLoading"></div>
+</ion-content>

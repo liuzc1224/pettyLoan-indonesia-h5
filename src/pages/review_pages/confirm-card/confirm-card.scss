@@ -1,0 +1,63 @@
+.certification_list_wrap {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 20px;
+  background-color: #F8F8F9;
+  .card-ios{
+    border-radius: .138889rem;
+  }
+  .scroll-content{
+    margin-bottom: 1.319444rem;
+  }
+}
+.certification_list_item {
+  width: 100%;
+  height: 1.666667rem;
+  font-size: 0.416667rem;
+  color: #333333;
+  text-align: left;
+  padding: 0px 0px 0px 0.625rem;
+  color: #2CC0FF;
+  position: relative;
+  border-radius: .138889rem;
+  .item-lable{
+    span{
+      vertical-align: middle;
+    }
+    span+span{
+      position: absolute;
+      right: .861111rem;
+    }
+    .icon-forward{
+      position: absolute;
+      right: .333333rem;
+      color: #989898;
+    }
+  }
+  img{
+    vertical-align: middle;
+    width: .680556rem;
+    display: inline-block;
+    margin-right: .361111rem;
+  }
+}
+.certification_list_item.success{
+  background-color: #2CC0FF;
+  color: #FFF;
+  .icon-forward{
+    color: #FFF;
+  }
+}
+.item-block{
+  min-height: .388889rem;
+}
+.loan-tip{
+  color: #CCCCCC;
+  font-size: .416667rem;
+  text-align: center;
+  line-height: .541667rem;
+  margin: .666667rem .875rem;
+}
+.btn-group{
+  padding: .555556rem;
+}

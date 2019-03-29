@@ -1,0 +1,325 @@
+<common-header
+    [centerTxt]='"review.steps.userInfo" | translate'
+    [leftFn]='back'
+    [parent]='parent'
+    ></common-header>
+<ion-content>
+
+
+    <div class="spinner_tip" *ngIf = '!resMark'>
+    </div>
+
+    <div *ngIf="resMark">
+        <div class="c-flex-row-allStart" style="padding: .569444rem .569444rem 0">
+            <ion-icon name="information-circle" class="cpf_icon"></ion-icon>
+            <span class="cpf_content">
+                {{ "review.baicInfo.title" | translate }}
+            </span>
+        </div>
+        <form [formGroup]="validForm" class="c-form-wrap" style="margin-top: .722222rem">
+
+            <!-- 亲生母亲姓名 -->
+            <div class="c-input-group">
+                <div class="c-input-title c-required">
+                    {{ "review.baicInfo.input.motherName" | translate }}
+                </div>
+                <input
+                    type="text"
+                    class="c-input-item"
+                    [placeholder] = ' "oper.input" | translate '
+                    formControlName = 'motherName'
+                    (focus)="makeRecord('motherName')"
+                >
+            </div>
+
+            <!-- 您的教育程度 -->
+            <div class="c-input-group" >
+                <div class="c-input-title c-required">
+                    {{ "review.baicInfo.input.educationBackground" | translate }}
+                </div>
+                <div style="position: relative;height: 1.388889rem;">
+                    <ion-select
+                        formControlName='educationBackground'
+                        class="c-form-input userInfo_section_gap"
+                        style="line-height: calc(1.277778rem - 22px)"
+                        [cancelText]='"oper.cancel" | translate'
+                        [okText]='"oper.sure" | translate'
+                        [placeholder] = ' "oper.chose" | translate '
+                        (click)="makeRecord('educationBackground')"
+                    >
+                        <ion-option *ngFor='let item of enum_edu' [value]='item.value'>
+                            {{ item.name }}
+                        </ion-option>
+                    </ion-select>
+                    <div style="opacity: 0 ;z-index:99;margin-bottom: .416667rem;position: absolute;top:0px;left:0px;width: 100% ; height: 100%"
+                         (click)="showModel('enum_edu' , 'educationBackground')">
+                        <input
+                            type="text"
+                            class="c-input-item userInfo_section_gap"
+                            [placeholder] = ' "oper.chose" | translate '
+                            id = 'educationBackground'
+                            readonly="true"
+                        >
+                        <ion-icon ios="md-arrow-dropdown" md="md-arrow-dropdown" class="userInfo_icon"></ion-icon>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 您的婚姻状况 -->
+            <div class="c-input-group" >
+                <div class="c-input-title c-required">
+                    {{ "review.baicInfo.input.maritalStatus" | translate }}
+                </div>
+                <div style="position: relative;height: 1.388889rem;">
+                    <ion-select
+                        formControlName='maritalStatus'
+                        class="c-form-input userInfo_section_gap"
+                        style="line-height: calc(1.277778rem - 22px)"
+                        [cancelText]='"oper.cancel" | translate'
+                        [okText]='"oper.sure" | translate'
+                        [placeholder] = ' "oper.chose" | translate '
+                        (click)="makeRecord('maritalStatus')"
+                    >
+                        <ion-option *ngFor='let item of enum_marry' [value]='item.value'>
+                            {{ item.name }}
+                        </ion-option>
+                    </ion-select>
+                    <div style="opacity: 0 ;z-index:99;margin-bottom: .416667rem;position: absolute;top:0px;left:0px;width: 100% ; height: 100%"
+                         (click)="showModel('enum_marry' , 'maritalStatus')">
+                        <input
+                            type="text"
+                            class="c-input-item userInfo_section_gap"
+                            [placeholder] = ' "oper.chose" | translate '
+                            id = 'maritalStatus'
+                            readonly="true"
+                        >
+                        <ion-icon ios="md-arrow-dropdown" md="md-arrow-dropdown" class="userInfo_icon"></ion-icon>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 您的孩子数量 -->
+            <div class="c-input-group" >
+                <div class="c-input-title c-required">
+                    {{ "review.baicInfo.input.childNumber" | translate }}
+                </div>
+                <div style="position: relative;height: 1.388889rem;">
+                    <ion-select
+                        formControlName='childNumber'
+                        class="c-form-input userInfo_section_gap"
+                        style="line-height: calc(1.277778rem - 22px)"
+                        [cancelText]='"oper.cancel" | translate'
+                        [okText]='"oper.sure" | translate'
+                        [placeholder] = ' "oper.chose" | translate '
+                        (click)="makeRecord('childNumber')"
+                    >
+                        <ion-option *ngFor='let item of enum_child' [value]='item.value'>
+                            {{ item.name }}
+                        </ion-option>
+                    </ion-select>
+                    <div style="opacity: 0 ;z-index:99;margin-bottom: .416667rem;position: absolute;top:0px;left:0px;width: 100% ; height: 100%"
+                         (click)="showModel('enum_child' , 'childNumber')">
+                        <input
+                            type="text"
+                            class="c-input-item userInfo_section_gap"
+                            [placeholder] = ' "oper.chose" | translate '
+                            id = 'childNumber'
+                            readonly="true"
+                        >
+                        <ion-icon ios="md-arrow-dropdown" md="md-arrow-dropdown" class="userInfo_icon"></ion-icon>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 当前居住地类型 -->
+            <div class="c-input-group" >
+                <div class="c-input-title c-required">
+                    {{ "review.baicInfo.input.residentialType" | translate }}
+                </div>
+                <div style="position: relative;height: 1.388889rem;">
+                    <ion-select
+                        formControlName='residentialType'
+                        class="c-form-input userInfo_section_gap"
+                        style="line-height: calc(1.277778rem - 22px)"
+                        [cancelText]='"oper.cancel" | translate'
+                        [okText]='"oper.sure" | translate'
+                        [placeholder] = ' "oper.chose" | translate '
+                        (click)="makeRecord('residentialType')"
+                    >
+                        <ion-option *ngFor='let item of enum_local' [value]='item.value'>
+                            {{ item.name }}
+                        </ion-option>
+                    </ion-select>
+                    <div style="opacity: 0 ;z-index:99;margin-bottom: .416667rem;position: absolute;top:0px;left:0px;width: 100% ; height: 100%"
+                         (click)="showModel('enum_local' , 'residentialType')">
+                        <input
+                            type="text"
+                            class="c-input-item userInfo_section_gap"
+                            [placeholder] = ' "oper.chose" | translate '
+                            id = 'residentialType'
+                            readonly="true"
+                        >
+                        <ion-icon ios="md-arrow-dropdown" md="md-arrow-dropdown" class="userInfo_icon"></ion-icon>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 居住地详细地址 -->
+            <div class="c-input-group">
+                <div class="c-input-title c-required">
+                    {{ "review.baicInfo.input.address" | translate }}
+                </div>
+                <input
+                    type="text"
+                    class="c-input-item userInfo_section_gap"
+                    [placeholder] = ' "review.baicInfo.placeHolder.street" | translate '
+                    formControlName = 'street'
+                    (focus)="makeRecord('street')"
+                >
+
+                <input
+                    type="text"
+                    class="c-input-item"
+                    [placeholder] = ' "review.baicInfo.placeHolder.block" | translate '
+                    formControlName = 'block'
+                    style="margin-bottom: .416667rem;"
+                    (focus)="makeRecord('block')"
+                >
+
+                <input
+                    type="text"
+                    class="c-input-item"
+                    [placeholder] = ' "review.baicInfo.placeHolder.regent" | translate '
+                    formControlName = 'regent'
+                    style="margin-bottom: .416667rem;"
+                    (focus)="makeRecord('regent')"
+                >
+
+                <input
+                    type="text"
+                    class="c-input-item"
+                    [placeholder] = ' "review.baicInfo.placeHolder.city" | translate '
+                    formControlName = 'city'
+                    style="margin-bottom: .416667rem;margin-top: .416667rem;"
+                    (focus)="makeRecord('city')"
+                >
+
+                <div style="position: relative;height: 1.388889rem;">
+                    <ion-select
+                        formControlName='provinceCode'
+                        class="c-form-input userInfo_section_gap"
+                        style="line-height: calc(1.277778rem - 22px)"
+                        [cancelText]='"oper.cancel" | translate'
+                        [okText]='"oper.sure" | translate'
+                        [placeholder] = ' "oper.chose" | translate '
+                        (click)="makeRecord('provinceCode')"
+                    >
+                        <ion-option *ngFor='let item of enum_provinceCode' [value]='item.value'>
+                            {{ item.name }}
+                        </ion-option>
+                    </ion-select>
+
+                    <div style="opacity: 0 ;z-index:99;position: absolute;top:0px;left:0px;width: 100% ; height: 100%"
+                         (click)="showModel('enum_provinceCode' , 'provinceCode')">
+                        <input
+                            type="text"
+                            class="c-input-item userInfo_section_gap"
+                            [placeholder] = ' "oper.chose" | translate '
+                            id = 'provinceCode'
+                            readonly="true"
+                        >
+                        <ion-icon ios="md-arrow-dropdown" md="md-arrow-dropdown" class="userInfo_icon"></ion-icon>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 居住时长 -->
+            <div class="c-input-group">
+                <div class="c-input-title c-required">
+                    {{ "review.baicInfo.input.residentialDuration" | translate }}
+                </div>
+                <div style="position: relative;height: 1.388889rem;">
+                    <ion-select
+                        formControlName='residentialDuration'
+                        class="c-form-input userInfo_section_gap"
+                        style="line-height: calc(1.277778rem - 22px)"
+                        [cancelText]='"oper.cancel" | translate'
+                        [okText]='"oper.sure" | translate'
+                        [placeholder] = ' "oper.chose" | translate '
+                        (click)="makeRecord('residentialDuration')"
+                    >
+                        <ion-option *ngFor='let item of enum_histime' [value]='item.value'>
+                            {{ item.name }}
+                        </ion-option>
+                    </ion-select>
+                    <div style="opacity: 0 ;z-index:99;margin-bottom: .416667rem;position: absolute;top:0px;left:0px;width: 100% ; height: 100%"
+                         (click)="showModel('enum_histime' , 'residentialDuration')">
+                        <input
+                            type="text"
+                            class="c-input-item userInfo_section_gap"
+                            [placeholder] = ' "oper.chose" | translate '
+                            id = 'residentialDuration'
+                            readonly="true"
+                        >
+                        <ion-icon ios="md-arrow-dropdown" md="md-arrow-dropdown" class="userInfo_icon"></ion-icon>
+                    </div>
+                </div>
+            </div>
+
+            <!-- whatsapp账号 -->
+            <div class="c-input-group">
+                <div class="c-input-title c-required">
+                    {{ "review.baicInfo.input.whatsapp" | translate }}
+                </div>
+                <input
+                    type="text"
+                    class="c-input-item"
+                    [placeholder] = ' "oper.input" | translate '
+                    formControlName = 'whatsapp'
+                    (focus)="makeRecord('whatsapp')"
+                >
+            </div>
+
+            <!-- E-mail -->
+            <div class="c-input-group">
+                <div class="c-input-title c-required">
+                    E-mail
+                </div>
+                <input
+                    type="text"
+                    class="c-input-item"
+                    [placeholder] = ' "oper.input" | translate '
+                    formControlName = 'email'
+                    (focus)="makeRecord('email')"
+                >
+            </div>
+            <!-- 年月日选择 -->
+            <!-- <div class="c-input-group">
+                <div class="c-input-title c-required">
+                    {{ "review.baicInfo.input.birthday" | translate }}
+                </div>
+                <div style="position: relative">
+                    <ion-datetime
+                            displayFormat="DD-MM-YYYY"
+                            formControlName="birthday"
+                            [placeholder] = ' "oper.chose" | translate '
+                            (click)="makeRecord('birthday')"
+                    >
+                    </ion-datetime>
+                    <ion-icon ios="md-arrow-dropdown" md="md-arrow-dropdown" class="userInfo_icon"></ion-icon>
+                </div>
+            </div> -->
+        </form>
+
+        <div class="preview_btnWrap" style="margin-top : .555556rem ">
+            <button
+                class="c-color-blue button"
+                (click) = 'nextBtn($event)'
+                [disabled]="!validForm.valid"
+            >
+                {{ "oper.next"  | translate}}
+            </button>
+        </div>
+
+    </div>
+</ion-content>

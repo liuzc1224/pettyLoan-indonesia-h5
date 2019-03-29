@@ -1,0 +1,48 @@
+<common-header
+  [centerTxt]="'review.steps.confim' | translate"
+  [leftFn]="back"
+  [parent]="parent"
+></common-header>
+<ion-content class="certification_list_wrap">
+  <div class="usrAuth_form c-flex-column-start">
+    <form [formGroup]="validForm" class="c-form-wrap">
+      <!-- id card number -->
+      <div class="c-input-group">
+        <div class="c-input-title c-required">
+          {{ "review.auth.input.id" | translate }}
+        </div>
+        <input
+          type="tel"
+          class="c-input-item"
+          [disabled]="true"
+          [placeholder]="'review.auth.placeHolder.id' | translate"
+          formControlName="idNumber"
+          (focus)="makeRecord('idNumber')"
+        />
+      </div>
+      <!-- user name  -->
+      <div class="c-input-group">
+        <div class="c-input-title c-required">
+          {{ "review.auth.input.name" | translate }}
+        </div>
+        <input
+          type="text"
+          [disabled]="true"
+          class="c-input-item"
+          [placeholder]="'review.auth.placeHolder.name' | translate"
+          formControlName="username"
+          (focus)="makeRecord('username')"
+        />
+      </div>
+    </form>
+  </div>
+  <div class="btn-group">
+    <button class="c-color-blue button" (click)="nextBtn($event)">
+        {{ "review.auth.input.next" | translate }}
+    </button>
+    <button class="c-color-blue button" (click)="toOCR()">
+        {{ "review.auth.input.priv" | translate }}
+    </button>
+  </div>
+  <div class="spinner_tip" *ngIf="showLoading"></div>
+</ion-content>
